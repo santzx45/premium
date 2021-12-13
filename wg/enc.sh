@@ -11,7 +11,7 @@ make install
 
 
 #Masuk Direktori
-cd /add
+cd /home/vps/public_html/add
 
 #Encrypt File
 shc -r -f add-host
