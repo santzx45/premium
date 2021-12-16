@@ -1,6 +1,6 @@
 #!/bin/bash
 # XRay Installation
-# Coded By BotVPN
+# Coded By GEO
 # ==================================
 domain=$(cat /root/domain)
 
@@ -8,9 +8,9 @@ domain=$(cat /root/domain)
 mkdir -p /usr/local/xray/
 
 # // Installation XRay Core
-wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/Sangarya/bc/main/xray-mini" 
-wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/Sangarya/bc/main/geosite.dat"
-wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/Sangarya/bc/main/geoip.dat"
+wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/Sangarya/xray/main/xray-mini" 
+wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/Sangarya/xray/main/geosite.dat"
+wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/Sangarya/xray/main/geoip.dat"
 chmod +x /usr/local/xray/xray
 
 # // Make XRay Mini Root Folder
@@ -55,9 +55,9 @@ WantedBy=multi-user.target
 EOF
 
 # // Installing Trojan Go
-wget https://raw.githubusercontent.com/Sangarya/bc/main/plugin-xray.sh && chmod +x plugin-xray.sh && ./plugin-xray.sh
+wget https://raw.githubusercontent.com/Sangarya/xray/main/plugin-xray.sh && chmod +x plugin-xray.sh && ./plugin-xray.sh
 rm -f /root/plugin-xray.sh
-wget https://raw.githubusercontent.com/Sangarya/bc/main/install-trgo.sh && chmod +x install-trgo.sh && ./install-trgo.sh
+wget https://raw.githubusercontent.com/Sangarya/xray/main/install-trgo.sh && chmod +x install-trgo.sh && ./install-trgo.sh
 rm -f /root/install-trgo.sh
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
@@ -782,27 +782,27 @@ systemctl restart xray
 systemctl enable xray
 systemctl start xray
 cd /usr/bin
-wget -O add-xws "https://raw.githubusercontent.com/Sangarya/bc/main/add-xws.sh"
-wget -O add-xray "https://raw.githubusercontent.com/Sangarya/bc/main/add-xray.sh"
-wget -O add-xvless "https://raw.githubusercontent.com/Sangarya/bc/main/add-xvless.sh"
-wget -O add-xtrgo "https://raw.githubusercontent.com/Sangarya/bc/main/add-xtrgo.sh"
-wget -O del-xws "https://raw.githubusercontent.com/Sangarya/bc/main/del-xws.sh"
-wget -O del-xvless "https://raw.githubusercontent.com/Sangarya/bc/main/del-xvless.sh"
-wget -O del-xray "https://raw.githubusercontent.com/Sangarya/bc/main/del-xray.sh"
-wget -O del-xtrgo "https://raw.githubusercontent.com/Sangarya/bc/main/del-xtrgo.sh"
-wget -O cek-xws "https://raw.githubusercontent.com/Sangarya/bc/main/cek-xws.sh"
-wget -O cek-xvless "https://raw.githubusercontent.com/Sangarya/bc/main/cek-xvless.sh"
-wget -O cek-xray "https://raw.githubusercontent.com/Sangarya/bc/main/cek-xray.sh"
-wget -O cek-xtrgo "https://raw.githubusercontent.com/Sangarya/bc/main/cek-xtrgo.sh"
-wget -O renew-xws "https://raw.githubusercontent.com/Sangarya/bc/main/renew-xws.sh"
-wget -O renew-xray "https://raw.githubusercontent.com/Sangarya/bc/main/renew-xray.sh"
-wget -O renew-xvless "https://raw.githubusercontent.com/Sangarya/bc/main/renew-xvless.sh"
-wget -O renew-xtrgo "https://raw.githubusercontent.com/Sangarya/bc/main/renew-xtrgo.sh"
-wget -O xcert "https://raw.githubusercontent.com/Sangarya/bc/main/xcert.sh"
-wget -O port-xtrgo "https://raw.githubusercontent.com/Sangarya/bc/main/port-xtrgo.sh"
-wget -O port-xvless "https://raw.githubusercontent.com/Sangarya/bc/main/port-xvless.sh"
-wget -O port-xws "https://raw.githubusercontent.com/Sangarya/bc/main/port-xws.sh"
-wget -O port-xray "https://raw.githubusercontent.com/Sangarya/bc/main/port-xray.sh"
+wget -O add-xws "https://raw.githubusercontent.com/Sangarya/xray/main/add-xws.sh"
+wget -O add-xray "https://raw.githubusercontent.com/Sangarya/xray/main/add-xray.sh"
+wget -O add-xvless "https://raw.githubusercontent.com/Sangarya/xray/main/add-xvless.sh"
+wget -O add-xtrgo "https://raw.githubusercontent.com/Sangarya/xray/main/add-xtrgo.sh"
+wget -O del-xws "https://raw.githubusercontent.com/Sangarya/xray/main/del-xws.sh"
+wget -O del-xvless "https://raw.githubusercontent.com/Sangarya/xray/main/del-xvless.sh"
+wget -O del-xray "https://raw.githubusercontent.com/Sangarya/xray/main/del-xray.sh"
+wget -O del-xtrgo "https://raw.githubusercontent.com/Sangarya/xray/main/del-xtrgo.sh"
+wget -O cek-xws "https://raw.githubusercontent.com/Sangarya/xray/main/cek-xws.sh"
+wget -O cek-xvless "https://raw.githubusercontent.com/Sangarya/xray/main/cek-xvless.sh"
+wget -O cek-xray "https://raw.githubusercontent.com/Sangarya/xray/main/cek-xray.sh"
+wget -O cek-xtrgo "https://raw.githubusercontent.com/Sangarya/xray/main/cek-xtrgo.sh"
+wget -O renew-xws "https://raw.githubusercontent.com/Sangarya/xray/main/renew-xws.sh"
+wget -O renew-xray "https://raw.githubusercontent.com/Sangarya/xray/main/renew-xray.sh"
+wget -O renew-xvless "https://raw.githubusercontent.com/Sangarya/xray/main/renew-xvless.sh"
+wget -O renew-xtrgo "https://raw.githubusercontent.com/Sangarya/xray/main/renew-xtrgo.sh"
+wget -O xcert "https://raw.githubusercontent.com/Sangarya/xray/main/xcert.sh"
+wget -O port-xtrgo "https://raw.githubusercontent.com/Sangarya/xray/main/port-xtrgo.sh"
+wget -O port-xvless "https://raw.githubusercontent.com/Sangarya/xray/main/port-xvless.sh"
+wget -O port-xws "https://raw.githubusercontent.com/Sangarya/xray/main/port-xws.sh"
+wget -O port-xray "https://raw.githubusercontent.com/Sangarya/xray/main/port-xray.sh"
 chmod +x add-xws
 chmod +x add-xray
 chmod +x add-xvless
