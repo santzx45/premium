@@ -84,7 +84,7 @@ mv client.json /home/vps/public_html/${user}-IgniterGO.json
 clear
 echo -e ""
 echo -e "${red}=================================${off}"
-echo -e "${blue}                TROJAN VPN${off}"
+echo -e "${blue}         TROJAN VPN${off}"
 echo -e "${red}=================================${off}"
 echo -e " ISP              : ${ISP}"
 echo -e " CITY             : ${CITY}"
