@@ -14,7 +14,7 @@ exit 0
 fi
 clear
 tr="$(cat ~/log-install.txt | grep -i Trojan | cut -d: -f2|sed 's/ //g')"
-echo -e "      Change Port $tr"
+echo -e "      Change Port 2087"
 read -p "New Port Trojan: " tr2
 if [ -z $tr2 ]; then
 echo "Please Input Port"
