@@ -1,9 +1,21 @@
 #!/bin/bash
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
-echo "Script By geo"
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
+MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 uuid=$(cat /etc/trojan/uuid.txt)
 source /var/lib/premium-script/ipvps.conf
@@ -19,28 +31,40 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 
 		if [[ ${user_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
 			exit 1
 		fi
 	done
-read -p "Expired (days): " masaaktif
+read -p "Expired (hari): " masaaktif
 sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
-created=`date -d "0 days" +"%d-%m-%Y"`
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
 trojanlink="trojan://${user}@${domain}:${tr}"
 clear
 echo -e ""
-echo -e "=============-Trojan-============"
-echo -e "Remarks        : ${user}"
-echo -e "Host/IP        : ${domain}"
-echo -e "port           : ${tr}"
-echo -e "Key            : ${user}"
-echo -e "link           : ${trojanlink}"
-echo -e "================================="
-echo -e "Created  : $created"
-echo -e "Expired   : $exp"
-echo -e ""
-echo -e "Script By @sampiiiiu"
-echo -e ""
+echo -e "${red}=================================${off}"
+echo -e "${white}       TROJAN ${off}"
+echo -e "${red}=================================${off}"
+echo -e " ${white}ISP    : ${ISP}"
+echo -e " CITY           : ${CITY}"
+echo -e " COUNTRY        : ${COUNTRY}"
+echo -e " Server IP      : ${MYIP}"
+echo -e " Remarks        : ${user}"
+echo -e " Host           : ${domain}"
+echo -e " Port           : ${tr}"
+echo -e " Key            : geo"
+echo -e " Link           : ${trojanlink}${off}"
+echo -e "${red}=================================${off}"
+echo -e " ${white}Aktif Selama   : $masaaktif Hari"
+echo -e " Dibuat Pada    : $tnggl"
+echo -e " Berakhir Pada  : $expe${off}"
+echo -e "${red}=================================${off}"
