@@ -48,7 +48,7 @@ echo -e "Username      : $Login "
 echo -e "Password      : $Pass"
 echo -e "==============================" | lolcat
 echo -e "ISP           : $ISP"
-echo -e "Host          : $IP"
+echo -e "Host          : $MYIP"
 echo -e "Domain        : $domain"
 echo -e "OpenSSH       : 171, 22"
 echo -e "Dropbear      : 443, 109, 143"
