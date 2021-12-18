@@ -11,7 +11,7 @@ src="https://img.shields.io/badge/Service-V2rayXray-success.svg">  <img src= "ht
 
 # ntb
 ```
-rm -rf setup.sh && apt install curl && wget https://raw.githubusercontent.com/Sangarya/premium/main/setup/setup.sh && apt update && apt install lolcat -y && apt install dos2unix && dos2unix setup.sh && chmod +x setup.sh && ./setup.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && sudo apt install -y wget && sudo apt install -y bzip2 gzip coreutils screen curl && apt install lolcat -y && gem install lolcat && wget https://raw.githubusercontent.com/Sangarya/premium/main/setup/setup.sh && chmod +x setup.sh && ./setup.sh && rm -rf ./setup.sh
 ```
 ## Description :
 
