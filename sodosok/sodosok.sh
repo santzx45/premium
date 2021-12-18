@@ -142,10 +142,46 @@ wget -O del-ss "https://raw.githubusercontent.com/Sangarya/premium/main/del/del-
 wget -O cek-ss "https://raw.githubusercontent.com/Sangarya/premium/main/cek/cek-ss.sh"
 wget -O renew-ss "https://raw.githubusercontent.com/Sangarya/premium/main/renew/renew-ss.sh"
 wget -O /usr/bin/system https://raw.githubusercontent.com/Sangarya/premium/main/menu/system.sh && chmod +x /usr/bin/system
+wget -O /usr/bin/host https://raw.githubusercontent.com/Sangarya/premium/main/v2ray/host.sh && chmod +x /usr/bin/host
+wget -O /usr/bin/clear-log https://raw.githubusercontent.com/Sangarya/premium/main/file/clear-log.sh && chmod +x /usr/bin/clear-log
+wget -O /usr/bin/pointing https://raw.githubusercontent.com/Sangarya/premium/main/file/pointing.sh && chmod +x /usr/bin/pointing
+rm -rf antiabuse.sh && apt install curl && wget https://raw.githubusercontent.com/Sangarya/premium/main/file/antiabuse.sh && apt update && apt install dos2unix && dos2unix antiabuse.sh && chmod +x antiabuse.sh && ./antiabuse.sh
+wget https://raw.githubusercontent.com/Sangarya/premium/main/file/antiabuse.sh && chmod +x antiabuse.sh && ./antiabuse.sh
+wget -O /usr/bin/renew-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/renew-trgo.sh && chmod +x /usr/bin/renew-trgo
+wget -O /usr/bin/del-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/del-trgo.sh && chmod +x /usr/bin/del-trgo
+wget -O /usr/bin/cek-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/cek-trgo.sh && chmod +x /usr/bin/cek-trgo
+wget -O /usr/bin/add-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/add-trgo.sh && chmod +x /usr/bin/add-trgo
+wget -O /usr/bin/port-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/port-trgo.sh && chmod +x /usr/bin/port-trgo 
+wget -O /usr/bin/bannerBACKUP https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerBACKUP && chmod +x /usr/bin/bannerBACKUP
+wget -O /usr/bin/bannerL2TP https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerL2TP && chmod +x /usr/bin/bannerL2TP
+wget -O /usr/bin/bannerPPTP https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerPPTP && chmod +x /usr/bin/bannerPPTP
+wget -O /usr/bin/bannerSHADOWSOCK https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerSHADOWSOCK && chmod +x /usr/bin/bannerSHADOWSOCK
+wget -O /usr/bin/bannerSSH https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerSSH && chmod +x /usr/bin/bannerSSH
+wget -O /usr/bin/bannerSSTP https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerSSTP && chmod +x /usr/bin/bannerSSTP
+wget -O /usr/bin/bannerTROJAN https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerTROJAN && chmod +x /usr/bin/bannerTROJAN
+wget -O /usr/bin/bannerV2RAY https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerV2RAY && chmod +x /usr/bin/bannerV2RAY
+wget -O /usr/bin/bannerDOMAIN https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerDOMAIN && chmod +x /usr/bin/bannerDOMAIN
+wget -O /usr/bin/bannerSYSTEM https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerSYSTEM && chmod +x /usr/bin/bannerSYSTEM
+wget -O /usr/bin/panelVPN https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/panelVPN && chmod +x /usr/bin/panelVPN
+wget -O /usr/bin/bebek https://raw.githubusercontent.com/Sangarya/premium/main/menu/bebek.sh && chmod +x /usr/bin/bebek
+wget -O /usr/bin/l2tp https://raw.githubusercontent.com/Sangarya/premium/main/menu/l2tp.sh && chmod +x /usr/bin/l2tp
+wget -O /usr/bin/bannerWIREGUARD https://raw.githubusercontent.com/Sangarya/premium/main/menu/banner/bannerWIREGUARD && chmod +x /usr/bin/bannerWIREGUARD
+wget -O /usr/bin/paneli https://raw.githubusercontent.com/Sangarya/premium/main/menu/paneli.sh && chmod +x /usr/bin/paneli
+wget -O /usr/bin/ppt https://raw.githubusercontent.com/Sangarya/premium/main/menu/ppt.sh && chmod +x /usr/bin/ppt
+wget -O /usr/bin/ssh https://raw.githubusercontent.com/Sangarya/premium/main/menu/ssh.sh && chmod +x /usr/bin/ssh
+wget -O /usr/bin/ssssr https://raw.githubusercontent.com/Sangarya/premium/main/menu/ssssr.sh && chmod +x /usr/bin/ssssr
+wget -O /usr/bin/sstpp https://raw.githubusercontent.com/Sangarya/premium/main/menu/sstpp.sh && chmod +x /usr/bin/sstpp
+wget -O /usr/bin/trojaan https://raw.githubusercontent.com/Sangarya/premium/main/menu/trojaan.sh && chmod +x /usr/bin/trojaan
+wget -O /usr/bin/v2raay https://raw.githubusercontent.com/Sangarya/premium/main/menu/v2raay.sh && chmod +x /usr/bin/v2raay
+wget -O /usr/bin/vleess https://raw.githubusercontent.com/Sangarya/premium/main/menu/vleess.sh && chmod +x /usr/bin/vleess
+wget -O /usr/bin/wgr https://raw.githubusercontent.com/Sangarya/premium/main/menu/wgr.sh && chmod +x /usr/bin/wgr
+wget -O /usr/bin/user-generate https://raw.githubusercontent.com/Sangarya/premium/main/file/user-generate && chmod +x /usr/bin/user-generate
+wget -O /usr/bin/autoreboot https://raw.githubusercontent.com/Sangarya/premium/main/file/autoreboot.sh && chmod +x /usr/bin/autoreboot
+wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/Sangarya/premium/main/add/add-l2tp.sh && chmod +x /usr/bin/add-l2tp && cd /usr/bin && apt install -y dos2unix && dos2unix add-l2tp
+wget -O /home/vps/public_html/index.html https://raw.githubusercontent.com/Sangarya/premium/main/setup/index.html && chmod +x /home/vps/public_html/index.html && cd /home/vps/public_html/index.html && apt install -y dos2unix && dos2unix index.html
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
 chmod +x renew-ss
-chmod +x system
 cd
 rm -f /root/sodosok.sh
