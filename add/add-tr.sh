@@ -48,7 +48,7 @@ thn2=$(date +"%Y")
 tnggl="$tgl2 $bln2, $thn2"
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
-trojanlink="trojan://${user}@${domain}:${tr}"
+trojanlink="trojan://${user}@${domain}:2087"
 clear
 echo -e ""
 echo -e "${red}=================================${off}"
