@@ -181,6 +181,7 @@ wget -O /home/vps/public_html/index.html https://raw.githubusercontent.com/Sanga
 #l2tp
 figlet -f slant L2TP | lolcat
 cd /usr/bin
+wget -O /usr/bin/add-cf https://raw.githubusercontent.com/Sangarya/premium/main/v2ray/add-cf.sh && chmod +x /usr/bin/add-cf
 wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/Sangarya/premium/main/add/add-l2tp.sh && chmod +x /usr/bin/add-l2tp
 wget -O /usr/bin/del-l2tp https://raw.githubusercontent.com/Sangarya/premium/main/del/del-l2tp.sh && chmod +x /usr/bin/del-l2tp
 wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/Sangarya/premium/main/add/add-pptp.sh && chmod +x /usr/bin/add-pptp
