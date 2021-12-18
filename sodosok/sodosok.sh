@@ -141,9 +141,11 @@ wget -O add-ss "https://raw.githubusercontent.com/Sangarya/premium/main/add/add-
 wget -O del-ss "https://raw.githubusercontent.com/Sangarya/premium/main/del/del-ss.sh"
 wget -O cek-ss "https://raw.githubusercontent.com/Sangarya/premium/main/cek/cek-ss.sh"
 wget -O renew-ss "https://raw.githubusercontent.com/Sangarya/premium/main/renew/renew-ss.sh"
+wget -O /usr/bin/system https://raw.githubusercontent.com/Sangarya/premium/main/menu/system.sh && chmod +x /usr/bin/system
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
 chmod +x renew-ss
+chmod +x system
 cd
 rm -f /root/sodosok.sh
