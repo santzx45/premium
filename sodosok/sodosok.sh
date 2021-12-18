@@ -145,7 +145,6 @@ wget -O /usr/bin/system https://raw.githubusercontent.com/Sangarya/premium/main/
 wget -O /usr/bin/host https://raw.githubusercontent.com/Sangarya/premium/main/v2ray/host.sh && chmod +x /usr/bin/host
 wget -O /usr/bin/clear-log https://raw.githubusercontent.com/Sangarya/premium/main/file/clear-log.sh && chmod +x /usr/bin/clear-log
 wget -O /usr/bin/pointing https://raw.githubusercontent.com/Sangarya/premium/main/file/pointing.sh && chmod +x /usr/bin/pointing
-rm -rf antiabuse.sh && apt install curl && wget https://raw.githubusercontent.com/Sangarya/premium/main/file/antiabuse.sh && apt update && apt install dos2unix && dos2unix antiabuse.sh && chmod +x antiabuse.sh && ./antiabuse.sh
 wget https://raw.githubusercontent.com/Sangarya/premium/main/file/antiabuse.sh && chmod +x antiabuse.sh && ./antiabuse.sh
 wget -O /usr/bin/renew-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/renew-trgo.sh && chmod +x /usr/bin/renew-trgo
 wget -O /usr/bin/del-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/del-trgo.sh && chmod +x /usr/bin/del-trgo
