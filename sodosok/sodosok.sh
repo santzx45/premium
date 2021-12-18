@@ -178,9 +178,161 @@ wget -O /usr/bin/user-generate https://raw.githubusercontent.com/Sangarya/premiu
 wget -O /usr/bin/autoreboot https://raw.githubusercontent.com/Sangarya/premium/main/file/autoreboot.sh && chmod +x /usr/bin/autoreboot
 wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/Sangarya/premium/main/add/add-l2tp.sh && chmod +x /usr/bin/add-l2tp && cd /usr/bin && apt install -y dos2unix && dos2unix add-l2tp
 wget -O /home/vps/public_html/index.html https://raw.githubusercontent.com/Sangarya/premium/main/setup/index.html && chmod +x /home/vps/public_html/index.html && cd /home/vps/public_html/index.html && apt install -y dos2unix && dos2unix index.html
+#l2tp
+figlet -f slant L2TP | lolcat
+cd /usr/bin
+wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/Sangarya/premium/main/add/add-l2tp.sh && chmod +x /usr/bin/add-l2tp
+wget -O /usr/bin/del-l2tp https://raw.githubusercontent.com/Sangarya/premium/main/del/del-l2tp.sh && chmod +x /usr/bin/del-l2tp
+wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/Sangarya/premium/main/add/add-pptp.sh && chmod +x /usr/bin/add-pptp
+wget -O /usr/bin/del-pptp https://raw.githubusercontent.com/Sangarya/premium/main/del/del-pptp.sh && chmod +x /usr/bin/del-pptp
+wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/Sangarya/premium/main/renew/renew-pptp.sh && chmod +x /usr/bin/renew-pptp
+wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/Sangarya/premium/main/renew/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
+touch /var/lib/premium-script/data-user-l2tp
+touch /var/lib/premium-script/data-user-pptp
+rm -f /root/ipsec.sh
+
+sleep 1
+cd /usr/bin
+wget -O /usr/bin/bebek https://raw.githubusercontent.com/Sangarya/premium/main/menu/bebek.sh && chmod +x /usr/bin/bebek
+wget -O /usr/bin/ppt https://raw.githubusercontent.com/Sangarya/premium/main/menu/ppt.sh && chmod +x /usr/bin/ppt
+wget -O /usr/bin/menu https://raw.githubusercontent.com/Sangarya/premium/main/menu/menu.sh && chmod +x /usr/bin/menu
+wget -O /usr/bin/paneli https://raw.githubusercontent.com/Sangarya/premium/main/menu/paneli.sh && chmod +x /usr/bin/paneli
+wget -O add-ss "https://raw.githubusercontent.com/Sangarya/premium/main/add/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/Sangarya/premium/main/del/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/Sangarya/premium/main/cek/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/Sangarya/premium/main/renew/renew-ss.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
 chmod +x renew-ss
+
+#PANEL-PORT
+figlet -f slant port | lolcat
+sleep 1
+cd /usr/bin
+wget -O port-ovpn "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-vless.sh"
+chmod +x port-ovpn
+chmod +x port-ssl
+chmod +x port-wg
+chmod +x port-tr
+chmod +x port-sstp
+chmod +x port-squid
+chmod +x port-ws
+chmod +x port-vless
+
+#PANEL SSH
+figlet -f slant SSH | lolcat
+sleep 1
+cd /usr/bin
+wget -O add-host "https://raw.githubusercontent.com/Sangarya/premium/main/add/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/Sangarya/premium/main/file/about.sh"
+wget -O menu "https://raw.githubusercontent.com/Sangarya/premium/main/menu/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/member.sh"
+wget -O delete "https://raw.githubusercontent.com/Sangarya/premium/main/del/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/Sangarya/premium/main/cek/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/Sangarya/premium/main/file/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/Sangarya/premium/main/file/info.sh"
+wget -O ram "https://raw.githubusercontent.com/Sangarya/premium/main/file/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/Sangarya/premium/main/renew/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/Sangarya/premium/main/file/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/Sangarya/premium/main/file/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/Sangarya/premium/main/file/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/Sangarya/premium/main/port/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/Sangarya/premium/main/file/webmin.sh"
+wget -O clear-log "https://raw.githubusercontent.com/Sangarya/premium/main/file/clear-log.sh"
+wget -O xp "https://raw.githubusercontent.com/Sangarya/premium/main/file/xp.sh"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Sangarya/premium/main/file/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O cfd "https://raw.githubusercontent.com/Sangarya/premium/main/v2ray/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/Sangarya/premium/main/v2ray/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/Sangarya/premium/main/v2ray/cfh.sh"
+wget -O trialws "https://raw.githubusercontent.com/Sangarya/premium/main/add/trialws.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/Sangarya/premium/main/file/autoreboot.sh"
+wget -O bannerku "https://raw.githubusercontent.com/Sangarya/premium/main/menu/bannerku"
+wget -O bbr "https://raw.githubusercontent.com/Sangarya/premium/main/menu/bbr.sh"
+wget -O menu "https://raw.githubusercontent.com/Sangarya/premium/main/menu/menu.sh"
+wget -O trojaan "https://raw.githubusercontent.com/Sangarya/premium/main/menu/trojaan.sh"
+wget -O vleess "https://raw.githubusercontent.com/Sangarya/premium/main/menu/vleess.sh"
+wget -O wgr "https://raw.githubusercontent.com/Sangarya/premium/main/menu/wgr.sh"
+wget -O l2tp "https://raw.githubusercontent.com/Sangarya/premium/main/menu/l2tp.sh"
+wget -O v2raay "https://raw.githubusercontent.com/Sangarya/premium/main/menu/v2raay.sh"
+wget -O ssh "https://raw.githubusercontent.com/Sangarya/premium/main/menu/ssh.sh"
+wget -O sstpp "https://raw.githubusercontent.com/Sangarya/premium/main/menu/sstpp.sh"
+wget -O ssssr "https://raw.githubusercontent.com/Sangarya/premium/main/menu/ssssr.sh"
+wget -O update "https://raw.githubusercontent.com/Sangarya/premium/main/setup/update.sh"
+wget -O running "https://raw.githubusercontent.com/Sangarya/premium/main/menu/running.sh"
+wget -O status "https://raw.githubusercontent.com/Sangarya/premium/main/menu/status.sh"
+chmod +x add-ss
+chmod +x del-ss
+chmod +x cek-ss
+chmod +x renew-ss
+chmod +x trialws
+chmod +x add-host
+chmod +x menu
+chmod +x usernew
+chmod +x trial
+chmod +x hapus
+chmod +x member
+chmod +x delete
+chmod +x cek
+chmod +x restart
+chmod +x speedtest
+chmod +x info
+chmod +x about
+chmod +x autokill
+chmod +x tendang
+chmod +x ceklim
+chmod +x ram
+chmod +x renew
+chmod +x clear-log
+chmod +x change-port
+chmod +x port-ovpn
+chmod +x port-ssl
+chmod +x port-wg
+chmod +x port-sstp
+chmod +x port-tr
+chmod +x port-squid
+chmod +x port-ws
+chmod +x port-vless
+chmod +x wbmn
+chmod +x clear-log
+chmod +x xp
+chmod +x cfd
+chmod +x cff
+chmod +x cfh
+chmod +x autoreboot
+chmod +x bannerku
+chmod +x bbr
+chmod +x menu
+chmod +x trojaan
+chmod +x vleess
+chmod +x wgr
+chmod +x l2tp
+chmod +x v2raay
+chmod +x ssh
+chmod +x sstpp
+chmod +x ssssr
+chmod +x update
+chmod +x running
+chmod +x status
 cd
 rm -f /root/sodosok.sh
