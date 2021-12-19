@@ -65,6 +65,7 @@ echo -e "==============================" | lolcat
 echo -e "tcp $ovpn    : http://$domain:85/tcp.ovpn"
 echo -e "udp $ovpn2    : http://$domain:85/udp.ovpn"
 echo -e "ssl 442     : http://$domain:85/ssl.ovpn"
+echo -e "ohp         : http://$domain:85/tcp-ohp.ovpn"
 echo -e "zip File    : http://$domain:85/geo.zip${off}"
 echo -e "==============================" | lolcat
 echo -e ""
