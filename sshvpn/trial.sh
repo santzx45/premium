@@ -83,4 +83,4 @@ echo -e "=============================="
 echo -e ""
 echo -e " Script Installer By : Geo•NTB"
 echo -e ""
-echo -e "==============================" | lolcat
+echo -e "=============================="
