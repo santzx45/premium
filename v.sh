@@ -173,7 +173,7 @@ echo -e " WS-OpenSSH        : WS-OpenSSH Service is "$green"running"$NC""
 else
 echo -e " WS-OpenSSH        : WS-OpenSSH is "$red"not running (Error)"$NC""
 fi
-status="$(systemctl show ws-openssh.service --no-page)"
+status="$(systemctl show ws-openvpn.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
