@@ -373,9 +373,9 @@ echo -e " $mg - $off $bd OpenVPN            $off   : $sovpn "
 echo -e " $mg - $off $bd WebSocket Dropbear $off   : $swsdrop"
 echo -e " $mg - $off $bd WebSocket OpenSSH   $off  : $swsopen"
 echo -e " $mg - $off $bd WebSocket OpenVPN  $off   : $swsovpn"
-echo -e " $mg - $off $bd OHP Dropbear $off         : $sohpp"
-echo -e " $mg - $off $bd OHP Ovpn   $off           : $sohppp"
-echo -e " $mg - $off $bd OHP SSH  $off             : $sohpppp"
+#echo -e " $mg - $off $bd OHP Dropbear $off         : $sohpp"
+#echo -e " $mg - $off $bd OHP Ovpn   $off           : $sohppp"
+#echo -e " $mg - $off $bd OHP SSH  $off             : $sohpppp"
 echo -e " $mg - $off $bd WebSocket TLS    $off     : $swstls"
 echo -e " $mg - $off $bd VMess TLS         $off    : $sv2ray "
 echo -e " $mg - $off $bd VMess NON-TLS    $off     : $sv2none "
@@ -455,9 +455,9 @@ sec=10
                 systemctl restart stunnel4
                 systemctl restart openvpn
                 systemctl restart dropbear
-                systemctl start dropbear-ohp.service 
-                systemctl start ovpn-ohp.service
-                systemctl start ssh-ohp.service
+                #systemctl start dropbear-ohp.service 
+                #systemctl start ovpn-ohp.service
+                #systemctl start ssh-ohp.service
 fi
 echo ""
 echo -e "${cyan}================================================${off}"
