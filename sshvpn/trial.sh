@@ -27,7 +27,7 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-Login=Trial`</dev/urandom tr -dc | head -c2`
+Login=Trial`</dev/urandom tr -dc X0-geo | head -c1`
 hari="1"
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
@@ -48,6 +48,8 @@ echo -e "Username      : $Login "
 echo -e "Password      : $Pass"
 echo -e "==============================" | lolcat
 echo -e "ISP           : $ISP"
+echo -e "COUNTRY       : $COUNTRY"
+echo -e "CITY          : $CITY"
 echo -e "Host          : $MYIP"
 echo -e "Domain        : $domain"
 echo -e "OpenSSH       : 171, 22"
