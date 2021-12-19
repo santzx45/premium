@@ -338,7 +338,7 @@ if [[ $ohpppp == "" ]]; then
       dahlah+=("err30")
 else
       sohpppp=$AKTIF
-      mantap+=("hore30)
+      mantap+=("hore30")
 fi
 
 jumlah1="${#mantap[@]}"
