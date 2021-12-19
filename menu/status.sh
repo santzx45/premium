@@ -326,19 +326,19 @@ fi
 if [[ $ohppp == "" ]]; then
       sohppp=$ERROR
       ingfo+=("ovpn ohp")
-      dahlah+=("err28")
+      dahlah+=("err29")
 else
       sohppp=$AKTIF
-      mantap+=("hore28")
+      mantap+=("hore29")
 fi
 
 if [[ $ohpppp == "" ]]; then
       sohpppp=$ERROR
       ingfo+=("ssh ohp")
-      dahlah+=("err28")
+      dahlah+=("err30")
 else
       sohpppp=$AKTIF
-      mantap+=("hore28")
+      mantap+=("hore30)
 fi
 
 jumlah1="${#mantap[@]}"
