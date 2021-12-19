@@ -147,6 +147,7 @@ wget -O /usr/bin/clear-log https://raw.githubusercontent.com/Sangarya/premium/ma
 wget -O /usr/bin/pointing https://raw.githubusercontent.com/Sangarya/premium/main/file/pointing.sh && chmod +x /usr/bin/pointing
 wget -O /usr/bin/bw https://raw.githubusercontent.com/Sangarya/premium/main/file/bw.sh && chmod +x /usr/bin/bw
 wget https://raw.githubusercontent.com/Sangarya/premium/main/file/antiabuse.sh && chmod +x antiabuse.sh && ./antiabuse.sh
+wget https://raw.githubusercontent.com/Sangarya/premium/main/ohp/ohp.sh && chmod +x ohp.sh
 wget -O /usr/bin/renew-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/renew-trgo.sh && chmod +x /usr/bin/renew-trgo
 wget -O /usr/bin/del-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/del-trgo.sh && chmod +x /usr/bin/del-trgo
 wget -O /usr/bin/cek-trgo raw.githubusercontent.com/Sangarya/premium/main/trojan-go/cek-trgo.sh && chmod +x /usr/bin/cek-trgo
