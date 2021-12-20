@@ -4,10 +4,9 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 
-echo "This Feature Can Only Be Used According To Vps Data With This Autoscript"
-echo "Please input link to your vps data backup file."
-echo "You can check it on your email if you run backup data vps before."
-read -rp "Link File: " -e url
+echo "Fitur Ini Hanya Dapat Digunakan Menurut Data Vps Dengan Autoscript Ini"
+echo "Silakan masukkan tautan ke file cadangan data vps Anda."
+read -rp "Link File Backup: " -e url
 wget -O backup.zip "$url"
 unzip backup.zip
 rm -f backup.zip
