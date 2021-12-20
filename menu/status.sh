@@ -455,9 +455,7 @@ sec=10
                 systemctl restart stunnel4
                 systemctl restart openvpn
                 systemctl restart dropbear
-                #systemctl start dropbear-ohp.service 
-                #systemctl start ovpn-ohp.service
-                #systemctl start ssh-ohp.service
+               
 fi
 echo ""
 echo -e "${cyan}================================================${off}"
