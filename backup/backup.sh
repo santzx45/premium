@@ -54,17 +54,17 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "The following is a link to your vps data backup file."
-echo -e "=================================" 
-echo -e "Detail Backup : "
-echo -e "================================="
+echo -e "Berikut ini adalah tautan ke file cadangan data vps Anda."
+echo -e "=================================" | lolcat
+echo -e "Detail Backup : " | lolcat
+echo -e "=================================" | lolcat
 echo -e "IP VPS        : $IP"
 echo -e "Link Backup   : $link"
-echo -e "================================="
-echo -e "Script By sampiiii"
+echo -e "=================================" | lolcat
+echo -e "Script By sampiiiiu" | lolcat
 echo ""
-echo -e "If you want to restore data, please enter the link above"
+echo -e "Jika Anda ingin memulihkan data, silakan masukkan tautan di atas" |lolcat
 echo ""
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
-echo "Done"
+echo "Done" | lolcat
