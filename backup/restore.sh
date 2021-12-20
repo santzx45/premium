@@ -5,7 +5,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 
 echo "Fitur Ini Hanya Dapat Digunakan Menurut Data Vps Dengan Autoscript Ini"
-echo "Silakan masukkan tautan ke file cadangan data vps Anda."
+echo "Silakan masukkan tautan ke file cadangan data vps Anda."| lolcat
 read -rp "Link File Backup: " -e url
 wget -O backup.zip "$url"
 unzip backup.zip
