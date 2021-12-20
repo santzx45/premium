@@ -11,18 +11,19 @@ white='\x1b[37m'
 bold='\033[1m'
 off='\x1b[m'
 flag='\x1b[47;41m'
+clear
 sys=$(cat /etc/v2ray/domain)
 Geogabut=paoandest@gmail.com
 Geo=1d158d0efc4eef787222cefff0b6d20981462
-DM1=geoganteng.my.id
-DM2=geoganteng.tech
-DM3=apa-itu.website
-DM4=vip-server.xyz
-DM5=gassfull.tech
-DM6=geo-gabut.me
+DM1=apa-itu.website
+DM2=bothervpn.tk
+DM3=gassfull.tech
+DM4=geo-gabut.me
+DM5=geoganteng.my.id
+DM6=geoganteng.tech
 DM7=gua-mau.online
-DM8=gua-mau.online
-DM9=bothervpn.tk
+DM8=vip-server.xyz
+DM9=vpsku.space
 echo -e ""
 echo -e "${cyan}=================================${off}"
 echo -e " DNS Record For Custom Subdomain" | lolcat
