@@ -27,14 +27,15 @@ clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
-echo "Starting Backup"
+echo "Starting Backup" | lolcat
 sleep 1
-echo "Membuat Directory"
+echo "Membuat Directory"| lolcat
 mkdir /root/backup
 sleep 1
-echo "Start Backup"
-sleep 2
+echo "Start Backup"| lolcat
+sleep 1
 clear
+echo "Harap Tunggu..."| lolcat
 cp /etc/passwd backup/
 cp /etc/group backup/
 cp /etc/shadow backup/
@@ -43,9 +44,10 @@ cp -r /etc/wireguard backup/wireguard
 cp /etc/ppp/chap-secrets backup/chap-secrets
 cp /etc/ipsec.d/passwd backup/passwd1
 cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
-cp -r /var/lib/lamvpnstore/ backup/lamvpnstore
+cp -r /var/lib/premium-script/ backup/premium-script
 cp -r /home/sstp backup/sstp
-cp -r /etc/trojan-go backup/trojan-go
+cp -r /etc/v2ray backup/v2ray
+cp -r /etc/trojan backup/trojan
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
 cp -r /home/vps/public_html backup/public_html
 cd /root
@@ -54,7 +56,7 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "Berikut ini adalah tautan ke file cadangan data vps Anda."
+echo -e "Berikut ini adalah tautan ke file cadangan data vps Anda."| lolcat
 echo -e "=================================" | lolcat
 echo -e "Detail Backup : " | lolcat
 echo -e "=================================" | lolcat
