@@ -56,10 +56,10 @@ squid=$(systemctl status squid | grep -i "active (running)")
 cron=$(systemctl status cron | grep -i "active (running)")
 fail2ban=$(systemctl status fail2ban | grep -i "active (running)")
 ksslh=$(systemctl status sslh | grep -i "active (running)")
-vnstat=$(systemctl status vnstat | grep -i "active (running)")
-ohpp=$(systemctl status dropbear-ohp.service  | grep -i "active (running)")
-ohppp=$(systemctl status ovpn-ohp.service  | grep -i "active (running)")
-ohpppp=$(systemctl status ssh-ohp.service  | grep -i "active (running)")
+#vnstat=$(systemctl status vnstat | grep -i "active (running)")
+#ohpp=$(systemctl status dropbear-ohp.service  | grep -i "active (running)")
+#ohppp=$(systemctl status ovpn-ohp.service  | grep -i "active (running)")
+#ohpppp=$(systemctl status ssh-ohp.service  | grep -i "active (running)")
 
 #======================================
 
@@ -313,33 +313,6 @@ if [[ $shadown == "" ]]; then
 else
       sshadown=$AKTIF
       mantap+=("hore27")
-fi
-
-if [[ $ohpp == "" ]]; then
-      sohpp=$ERROR
-      ingfo+=("dropbear ohp")
-      dahlah+=("err28")
-else
-      sohpp=$AKTIF
-      mantap+=("hore28")
-fi
-
-if [[ $ohppp == "" ]]; then
-      sohppp=$ERROR
-      ingfo+=("ovpn ohp")
-      dahlah+=("err29")
-else
-      sohppp=$AKTIF
-      mantap+=("hore29")
-fi
-
-if [[ $ohpppp == "" ]]; then
-      sohpppp=$ERROR
-      ingfo+=("ssh ohp")
-      dahlah+=("err30")
-else
-      sohpppp=$AKTIF
-      mantap+=("hore30")
 fi
 
 jumlah1="${#mantap[@]}"
