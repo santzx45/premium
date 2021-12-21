@@ -55,11 +55,8 @@ nginx=$(systemctl status nginx | grep -i "active (running)")
 squid=$(systemctl status squid | grep -i "active (running)")
 cron=$(systemctl status cron | grep -i "active (running)")
 fail2ban=$(systemctl status fail2ban | grep -i "active (running)")
+vnstat=$(systemctl status vnstat | grep -i "active (running)")
 ksslh=$(systemctl status sslh | grep -i "active (running)")
-#vnstat=$(systemctl status vnstat | grep -i "active (running)")
-#ohpp=$(systemctl status dropbear-ohp.service  | grep -i "active (running)")
-#ohppp=$(systemctl status ovpn-ohp.service  | grep -i "active (running)")
-#ohpppp=$(systemctl status ssh-ohp.service  | grep -i "active (running)")
 
 #======================================
 
@@ -346,9 +343,6 @@ echo -e " $mg - $off $bd OpenVPN            $off   : $sovpn "
 echo -e " $mg - $off $bd WebSocket Dropbear $off   : $swsdrop"
 echo -e " $mg - $off $bd WebSocket OpenSSH   $off  : $swsopen"
 echo -e " $mg - $off $bd WebSocket OpenVPN  $off   : $swsovpn"
-#echo -e " $mg - $off $bd OHP Dropbear $off         : $sohpp"
-#echo -e " $mg - $off $bd OHP Ovpn   $off           : $sohppp"
-#echo -e " $mg - $off $bd OHP SSH  $off             : $sohpppp"
 echo -e " $mg - $off $bd WebSocket TLS    $off     : $swstls"
 echo -e " $mg - $off $bd VMess TLS         $off    : $sv2ray "
 echo -e " $mg - $off $bd VMess NON-TLS    $off     : $sv2none "
@@ -428,7 +422,6 @@ sec=10
                 systemctl restart stunnel4
                 systemctl restart openvpn
                 systemctl restart dropbear
-               
 fi
 echo ""
 echo -e "${cyan}================================================${off}"
