@@ -1,11 +1,28 @@
 #!/bin/bash
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-MYIP=$(wget -qO- ipv4.wildyproject.com);
-echo "Script By geo"
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
+MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-IP=$(wget -qO- icanhazip.com);
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/v2ray/domain)
+else
+domain=$IP
+fi
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
@@ -19,7 +36,7 @@ else
 http="$((lastport2+1))"
 fi
 echo ""
-echo "Masukkan password"
+#echo "Masukkan password"
 
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Password: " -e user
@@ -27,12 +44,20 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
 			exit 1
 		fi
 	done
 read -p "Expired (hari): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 cat > /etc/shadowsocks-libev/$user-tls.json<<END
 {   
     "server":"0.0.0.0",
@@ -70,24 +95,37 @@ systemctl start shadowsocks-libev-server@$user-tls.service
 systemctl enable shadowsocks-libev-server@$user-tls.service
 systemctl start shadowsocks-libev-server@$user-http.service
 systemctl enable shadowsocks-libev-server@$user-http.service
-tmp1=$(echo -n "aes-256-cfb:${user}@${IP}:$tls" | base64 -w0)
-tmp2=$(echo -n "aes-256-cfb:${user}@${IP}:$http" | base64 -w0)
-linkss1="ss://${tmp1}?plugin=obfs-local;obfs=tls;obfs-host=bing.com"
-linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bing.com"
+tmp1=$(echo -n "aes-256-cfb:${user}@${domain}:$tls" | base64 -w0)
+tmp2=$(echo -n "aes-256-cfb:${user}@${domain}:$http" | base64 -w0)
+linkss1="ss://${tmp1}?plugin=obfs-local;obfs=tls;obfs-host=bug-anda.com"
+linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bug-anda.com"
 echo -e "### $user $exp
 port_tls $tls
 port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
-echo -e "=======-Shadowsocks-======="
-echo -e "IP/Host        : $IP"
-echo -e "Port OBFS TLS  : $tls"
-echo -e "Port OBFS HTTP : $http"
-echo -e "Password       : $user"
-echo -e "Method         : aes-256-cfb"
-echo -e "Expired On     : $exp"
-echo -e "==========================="
-echo -e "Link OBFS TLS  : $linkss1"
-echo -e "==========================="
-echo -e "Link OBFS HTTP : $linkss2"
-echo -e "==========================="
+echo -e ""
+echo -e "${red}===================================${off}"
+echo -e "${white}  SHADOWSOCKS OBFS${off}"
+echo -e "${red}===================================${off}"
+echo -e " ${white}ISP    : $ISP"
+echo -e " CITY           : $CITY"
+echo -e " COUNTRY        : $COUNTRY"
+echo -e " Server IP      : $MYIP"
+echo -e " Server Host    : $domain"
+echo -e " OBFS TLS       : $tls"
+echo -e " OBFS HTTP      : $http"
+echo -e " Password       : $user"
+echo -e " Method         : aes-256-cfb${off}"
+echo -e "${red}===================================${off}"
+echo -e "${white}OBFS  TLS${off}"
+echo -e "$linkss1" | lolcat
+echo -e "${red}===================================${off}"
+echo -e "${white}OBFS HTTP${off}"
+echo -e "$linkss2" | lolcat
+echo -e "${red}===================================${off}"
+echo -e " ${white}Aktif Selama   : $masaaktif Hari"
+echo -e " Dibuat Pada    : $tnggl"
+echo -e " Berakhir Pada  : $expe${off}"
+echo -e "${red}=================================${off}"
+echo -e ""
