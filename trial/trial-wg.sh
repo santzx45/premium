@@ -89,7 +89,5 @@ echo -e " ${white}WireGuard URL  : "
 echo -e " http://$SERVER_PUB_IP:81/$CLIENT_NAME.conf${off}"
 echo -e "${red}=================================${off}"
 echo -e " ${white}Aktif Selama   : $masaaktif Hari"
-echo -e " Dibuat Pada    : $tnggl"
-echo -e " Berakhir Pada  : $expe${off}"
 echo -e "${red}=================================${off}"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
