@@ -1,4 +1,4 @@
-<h2 align="center">AutoScript Install SSH & OpenVPN & V2rayXray & SSR & Trojan & WireGuard VPS By <p align="center">
+<h3 align="center">AutoScript Install SSH & OpenVPN & V2rayXray & SSR & Trojan & WireGuard VPS By <p align="center">
 <a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/GEO GABUT-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p> <img src="https://img.shields.io/badge/Version-2.0.4-blue.svg"></h2>
 
@@ -17,7 +17,7 @@ sudo apt update && sudo apt upgrade -y --fix-missing && update-grub && sleep 2 &
 ```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && sudo apt install -y wget && sudo apt install -y bzip2 gzip coreutils screen curl && apt install lolcat -y && gem install lolcat && wget https://raw.githubusercontent.com/Sangarya/premium/main/setup/setup.sh && chmod +x setup.sh && ./setup.sh && rm -rf ./setup.sh
 ```
-# Description :
+## Description :
 
 > Service Port                                                
    - OpenSSH                 : 22
