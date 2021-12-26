@@ -1,6 +1,6 @@
 <h3 align="center">AutoScript Install SSH & OpenVPN & V2rayXray & SSR & Trojan & WireGuard VPS By <p align="center">
 <a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/GEO GABUT-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
-</p> <img src="https://img.shields.io/badge/Version-2.0.4-blue.svg"></h2>
+</p> <img src="https://img.shields.io/badge/Version-2.0.4-cyan.svg"></h2>
 
 <h2 align="center"> Supported Linux Distribution</h2>
 <p align="center"><img src="https://d33wubrfki0l68.cloudfront.net/5911c43be3b1da526ed609e9c55783d9d0f6b066/9858b/assets/img/debian-ubuntu-hover.png"></p> 
@@ -9,17 +9,16 @@
 <p align="center"><img src="https://img.shields.io/badge/Service-OpenSSH-success.svg">  <img src="https://img.shields.io/badge/Service-Dropbear-success.svg">  <img src="https://img.shields.io/badge/Service-BadVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Stunnel-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Squid3-success.svg">  <img   src="https://img.shields.io/badge/Service-Webmin-success.svg">  <img src="https://img.shields.io/badge/Service-Privoxy-green.svg">   <img
 src="https://img.shields.io/badge/Service-V2rayXray-success.svg">  <img src= "https://img.shields.io/badge/Service-SSR-success.svg">  <img src="https://img.shields.io/badge/Service-Trojan-success.svg">  <img src="https://img.shields.io/badge/Service-WireGuard-success.svg">
 
-### Step 1
+<a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/STEP 1 :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 ```
 sudo apt update && sudo apt upgrade -y --fix-missing && update-grub && sleep 2 && reboot
 ```
-### Step 2
+<a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/STEP 2 :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 ```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && sudo apt install -y wget && sudo apt install -y bzip2 gzip coreutils screen curl && apt install lolcat -y && gem install lolcat && wget https://raw.githubusercontent.com/Sangarya/premium/main/setup/setup.sh && chmod +x setup.sh && ./setup.sh && rm -rf ./setup.sh
 ```
-## Description :
-
-> Service Port                                                
+<a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/DESCRIPTION :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/SERVICE PORT :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
    - OpenSSH                 : 22
    - OpenVPN                 : TCP 1194, UDP 2200, SSL 442
    - Stunnel4                : 443, 171                            
@@ -46,7 +45,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
    - TrojanGFW               : 2087
    - TrojanGO                : 2053
 
-   > Server Information & Other Features
+<a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/SERVER INFORMATION & OTHER FEATURES :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
    - Timezone                : Asia/Jakarta (GMT +7)
    - Fail2Ban                : [ON]
    - Dflate                  : [ON]
@@ -54,6 +53,5 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
    - Auto-Reboot             : [ON]
    - IPv6                    : [OFF]
 
-## Credit :
-  
+<a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/CREDIT :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 *   Horas Marolop Amsal Siregar
