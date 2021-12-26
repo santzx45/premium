@@ -53,5 +53,36 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
    - Auto-Reboot             : [ON]
    - IPv6                    : [OFF]
 
+<a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/TAMPILAN MENU :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+
+![1](https://user-images.githubusercontent.com/92498377/147404725-f0c40d01-bd36-4d1c-9584-1f9d36f45456.jpg)
+
+![IMG_20211226_174301](https://user-images.githubusercontent.com/92498377/147404726-a8a8dd76-e459-48a0-95d0-9e4e271b10a2.jpg)
+
+![Screenshot_2021-12-26-17-38-00-43_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404727-c4f3e846-55ab-488f-a53b-3a389fd91160.jpg)
+
+![Screenshot_2021-12-26-17-38-32-03_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404728-69b14753-830a-492f-bb18-2b5719918449.jpg)
+
+![Screenshot_2021-12-26-17-39-12-73_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404729-b21acb93-866c-4ae3-aa87-0474ae16391f.jpg)
+
+![Screenshot_2021-12-26-17-39-35-26_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404731-b0468069-db3d-4f0c-9fc0-e8ae2555281b.jpg)
+
+![Screenshot_2021-12-26-17-39-52-18_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404733-69fc7d4c-3673-42f3-88d3-fb7e27349151.jpg)
+
+![Screenshot_2021-12-26-17-40-17-51_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404734-9460a039-4039-4616-a07f-0684ea895658.jpg)
+
+![Screenshot_2021-12-26-17-40-36-10_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404735-5a2b7515-85c8-477c-934b-21a7a4805550.jpg)
+
+![Screenshot_2021-12-26-17-41-10-13_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404736-dd32cdc4-6e73-4544-be64-8edf8d933565.jpg)
+
+![Screenshot_2021-12-26-17-41-32-84_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404737-ff6270ac-3828-4fa7-91e4-f54efd2312d2.jpg)
+
+![Screenshot_2021-12-26-17-41-56-59_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404738-dd2b4380-4ef7-44dc-9b9e-922c6c4cc4a6.jpg)
+
+![Screenshot_2021-12-26-17-42-20-49_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404739-aa1cd6a9-57a1-481a-b469-13bec88b2877.jpg)
+
+![Screenshot_2021-12-26-17-43-59-81_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/92498377/147404740-4c884c8e-a007-4992-bc9f-364fa4e18486.jpg)
+
+
 <a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/CREDIT :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 *   Horas Marolop Amsal Siregar
