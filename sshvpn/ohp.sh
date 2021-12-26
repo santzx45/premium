@@ -1,29 +1,39 @@
 #!/bin/bash
-# Ohp Script
-# My Telegram : https://t.me/sampiiiiu
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+# Open HTTP Puncher By GEO
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
 IZIN=$( curl https://raw.githubusercontent.com/Sangarya/izin/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+echo -e "${green}Permission Accepted...${NC}"
 else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/sampiiiiu"
+echo -e "${red}Permission Denied!${NC}";
+echo "Only For Premium Users"
 exit 0
 fi
+clear
+# Direct Proxy Squid For OpenVPN TCP
+
+RED='\e[1;31m'
+GREEN='\e[0;32m'
+BLUE='\e[0;34m'
+NC='\e[0m'
+MYIP=$(wget -qO- https://icanhazip.com);
+MYIP2="s/xxxxxxxxx/$MYIP/g";
+
+# Update Repository VPS
+clear
+apt update 
+apt-get -y upgrade
+
+# Port Server
+Port_OpenVPN_TCP='1194';
+Port_Squid='3128';
+Port_OHP='8282';
+Port_Dropbear='8181';
+Port_ssh='8383';
 
 # Installing ohp Server
 cd 
@@ -77,35 +87,11 @@ unzip ohpserver-linux32.zip
 rm ohpserver-linux32.zip
 mv ohpserver /usr/local/bin/
 chmod +x /usr/local/bin/ohpserver
-/bin/rm -rf ohpserver*
 
-# Installing Service
-# SSH OHP Port 8181
-cat > /etc/systemd/system/ssh-ohp.service << END
-[Unit]
-Description=SSH OHP Redirection Service
-Documentation=https://t.me/sampiiiiu
-After=network.target nss-lookup.target
-
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8181 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:22
-Restart=on-failure
-LimitNOFILE=infinity
-
-[Install]
-WantedBy=multi-user.target
-END
-
-# Dropbear OHP 8282
 cat > /etc/systemd/system/dropbear-ohp.service << END
-[Unit]]
-Description=Dropbear OHP Redirection Service
-Documentation=https://t.me/sampiiiiu
+[Unit]
+Description=DROPBEAR OHP Redirection Service
+Documentation=https://t.me/onepiecevpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -114,19 +100,20 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8282 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:109
+ExecStart=/usr/local/bin/ohpserver -port 8181 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:143
 Restart=on-failure
 LimitNOFILE=infinity
 
 [Install]
 WantedBy=multi-user.target
+
 END
 
-# OpenVPN OHP 8383
-cat > /etc/systemd/system/openvpn-ohp.service << END
-[Unit]]
+cat > /etc/systemd/system/ovpn-ohp.service << END
+
+[Unit]
 Description=OpenVPN OHP Redirection Service
-Documentation=https://t.me/sampiiiiu
+Documentation=https://t.me/onepiecevpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -135,50 +122,69 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:1194
+ExecStart=/usr/local/bin/ohpserver -port 8282 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:1194
 Restart=on-failure
 LimitNOFILE=infinity
 
 [Install]
 WantedBy=multi-user.target
+
+END
+cat > /etc/systemd/system/dropbear-ohp.service << END
+[Unit]
+Description=DROPBEAR OHP Redirection Service
+Documentation=https://t.me/onepiecevpn
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/ohpserver -port 8181 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:143
+Restart=on-failure
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
+
 END
 
+cat > /etc/systemd/system/ssh-ohp.service << END
+
+[Unit]
+Description=OpenVPN OHP Redirection Service
+Documentation=https://t.me/onepiecevpn
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:22 -tunnel 127.0.0.1:22
+Restart=on-failure
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
+
+END
+systemctl enable dropbear-ohp.service 
+systemctl enable ovpn-ohp.service 
+systemctl enable ssh-ohp.service
+systemctl start dropbear-ohp.service 
+systemctl start ovpn-ohp.service
+systemctl start ssh-ohp.service
 systemctl daemon-reload
-systemctl enable ssh-ohp
-systemctl restart ssh-ohp
-systemctl enable dropbear-ohp
-systemctl restart dropbear-ohp
-systemctl enable openvpn-ohp
-systemctl restart openvpn-ohp
-#------------------------------
-printf 'INSTALLATION COMPLETED !\n'
-sleep 0.5
-printf 'CHECKING LISTENING PORT\n'
-if [ -n "$(ss -tupln | grep ohpserver | grep -w 8181)" ]
-then
-	echo 'SSH OHP Redirection Running'
-else
-	echo 'SSH OHP Redirection Not Found, please check manually'
-fi
-sleep 0.5
-if [ -n "$(ss -tupln | grep ohpserver | grep -w 8282)" ]
-then
-	echo 'Dropbear OHP Redirection Running'
-else
-	echo 'Dropbear OHP Redirection Not Found, please check manually'
-fi
-sleep 0.5
-if [ -n "$(ss -tupln | grep ohpserver | grep -w 8383)" ]
-then
-	echo 'OpenVPN OHP Redirection Running'
-else
-	echo 'OpenVPN OHP Redirection Not Found, please check manually'
-fi
-sleep 0.5
+systemctl enable ohp
+systemctl restart ohp
 echo ""
 echo -e "${GREEN}Done Installing OHP Server${NC}"
 echo -e "Port Dropbear OHP: $Port_Dropbear"
 echo -e "Port OVPN OHP TCP: $Port_OHP"
 echo -e "Porr SSH OHP     : $Port_ssh"
 echo -e "Link Download OVPN OHP: http://$MYIP:85/tcp-ohp.ovpn"
-echo ""
+echo -e "Script By GEO"
