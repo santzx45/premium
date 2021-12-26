@@ -1,4 +1,4 @@
-<h2 align="center">AutoScript Install SSH & OpenVPN & V2rayXray & SSR & Trojan & WireGuard For Debian VPS By <p align="center">
+<h2 align="center">AutoScript Install SSH & OpenVPN & V2rayXray & SSR & Trojan & WireGuard VPS By <p align="center">
 <a href="#"><img title="Geo Gabut" src="https://img.shields.io/badge/GEO GABUT-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p> <img src="https://img.shields.io/badge/Version-2.0.4-blue.svg"></h2>
 
