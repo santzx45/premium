@@ -18,7 +18,7 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-cat /usr/bin/bannerSSH | lolcat
+cat /usr/bin/bannerTRIAL | lolcat
 echo -e""
 echo -e "${color1} 1${color3}.$bd Trial Account V2ray Vmess (${color2}trial-ws${color3})"
 echo -e "${color1} 2${color3}.$bd Trial Account V2ray Vless (${color2}trial-vless${color3})"
