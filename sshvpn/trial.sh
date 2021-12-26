@@ -59,6 +59,9 @@ echo -e "WS SSL        : 443, 2096"
 echo -e "WS OpenSSH    : 2095"
 echo -e "WS Dropbear   : 2052"
 echo -e "WS Ovpn       : 2082"
+echo -e "Ohp SSH       : 8181"
+echo -e "Ohp Dropbear  : 8282"
+echo -e "Ohp Ovpn      : 8383"
 echo -e "Port Squid    :$sqd"
 echo -e "Badvpn Udpgw  : 7100-7300"
 echo -e "==============================" | lolcat
@@ -67,6 +70,7 @@ echo -e "==============================" | lolcat
 echo -e "tcp $ovpn    : http://$domain:85/tcp.ovpn"
 echo -e "udp $ovpn2    : http://$domain:85/udp.ovpn"
 echo -e "ssl 442     : http://$domain:85/ssl.ovpn"
+echo -e "ohp         : http://$domain:85/tcp-ohp.ovpn"
 echo -e "zip File    : http://$domain:85/geo.zip${off}"
 echo -e "==============================" | lolcat
 echo -e "Payload WebSocket 1"
