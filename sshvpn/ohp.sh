@@ -31,9 +31,9 @@ apt-get -y upgrade
 # Port Server
 Port_OpenVPN_TCP='1194';
 Port_Squid='3128';
-Port_OHP='8282';
-Port_Dropbear='8181';
-Port_ssh='8383';
+Port_OHP='8383';
+Port_Dropbear='8282';
+Port_ssh='8181';
 
 # Installing ohp Server
 cd 
@@ -100,7 +100,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8181 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:143
+ExecStart=/usr/local/bin/ohpserver -port 8282 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:143
 Restart=on-failure
 LimitNOFILE=infinity
 
@@ -122,7 +122,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8282 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:1194
+ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:1194
 Restart=on-failure
 LimitNOFILE=infinity
 
@@ -142,7 +142,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8181 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:143
+ExecStart=/usr/local/bin/ohpserver -port 8282 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:143
 Restart=on-failure
 LimitNOFILE=infinity
 
@@ -164,7 +164,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:22 -tunnel 127.0.0.1:22
+ExecStart=/usr/local/bin/ohpserver -port 8181 -proxy 127.0.0.1:22 -tunnel 127.0.0.1:22
 Restart=on-failure
 LimitNOFILE=infinity
 
@@ -185,6 +185,6 @@ echo ""
 echo -e "${GREEN}Done Installing OHP Server${NC}"
 echo -e "Port Dropbear OHP: $Port_Dropbear"
 echo -e "Port OVPN OHP TCP: $Port_OHP"
-echo -e "Porr SSH OHP     : $Port_ssh"
+echo -e "Port SSH OHP     : $Port_ssh"
 echo -e "Link Download OVPN OHP: http://$MYIP:85/tcp-ohp.ovpn"
 echo -e "Script By GEO"
