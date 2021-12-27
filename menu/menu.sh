@@ -56,7 +56,7 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Backup Section         $mg                               ║"
  echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd Trial Account Section            $mg                     ║"
  echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd System Tools Section            $mg                      ║"
- echo -e  " $mg ║\e[m$red 9$bl.\e[m$bd Update Script Section $gl Version $bl(2.0.4)      $mg          ║"
+ echo -e  " $mg ║\e[m$red 9$bl.\e[m$bd Update Script Section $gl Version $op($bl 2.0.4 $op)      $mg        ║"
  echo -e  "  \e[1;32m╠══════════════════════════════════════════════════════════╣" | lolcat
  echo -e  "  ║ x.   Exit                                                ║" | lolcat
  echo -e  "  \e[1;32m╚══════════════════════════════════════════════════════════╝" | lolcat
