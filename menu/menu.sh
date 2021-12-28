@@ -48,7 +48,7 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e " $mg ║ \e[36;1m• IP VPS            :\e[0m$bd $IPVPS"
  echo -e " $mg ║ \e[36;1m• Domain            :\e[0m$bd $DOMAIN"
  echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
- echo -e  "  ║                     [ Menu Tunneling ]                   ║" |lolcat
+ echo -e  "  ║                     [ MENU TUNNELING ]                   ║" |lolcat
  echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
  echo -e  " $gl ║\e[m$red 1$bl.\e[m$bd SSH & OpenVPN Section      $bl                           ║"
  echo -e  " $gl ║\e[m$red 2$bl.\e[m$bd SSTP - L2TP - PPTP - Wireguard Section     $bl           ║"
