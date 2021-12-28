@@ -34,6 +34,8 @@ tnggl=$(date +"%d-%B-%Y")
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+ echo -e  "  ║                       [ INFORMASI VPS ]                   ║" |lolcat
+ echo -e  "  ╠═══════════════════════════════════════════════════════════╣"| lolcat
  echo -e " $bl ║ \e[36;1m• ISP Name          :\e[0m$bd $ISP"
  echo -e " $bl ║ \e[36;1m• City              :\e[0m$bd $CITY"
  echo -e " $bl ║ \e[36;1m• CPU Model         :\e[0m$bd$cname"
@@ -46,7 +48,7 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e " $mg ║ \e[36;1m• IP VPS            :\e[0m$bd $IPVPS"
  echo -e " $mg ║ \e[36;1m• Domain            :\e[0m$bd $DOMAIN"
  echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
- echo -e  "  ║                       ┃MENU OPTIONS┃                     ║" |lolcat
+ echo -e  "  ║                     [ Menu Tunneling ]                   ║" |lolcat
  echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
  echo -e  " $gl ║\e[m$red 1$bl.\e[m$bd SSH & OpenVPN Section      $bl                           ║"
  echo -e  " $gl ║\e[m$red 2$bl.\e[m$bd SSTP - L2TP - PPTP - Wireguard Section     $bl           ║"
