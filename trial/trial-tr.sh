@@ -34,7 +34,7 @@ user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
-trojanlink="trojan://${user}@${domain}:${tr}"
+trojanlink="trojan://${user}@${domain}:2087"
 clear
 echo -e ""
 echo -e "${red}=================================${off}"
@@ -46,7 +46,7 @@ echo -e " COUNTRY        : ${COUNTRY}"
 echo -e " Server IP      : ${MYIP}"
 echo -e " Remarks        : ${user}"
 echo -e " Host           : ${domain}"
-echo -e " Port           : ${tr}"
+echo -e " Port           : 2087"
 echo -e " Key            : geo"
 echo -e " Link           : ${trojanlink}${off}"
 echo -e "${red}=================================${off}"
