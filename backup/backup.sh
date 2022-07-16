@@ -15,13 +15,13 @@ clear
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Sangarya/izin/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/santzx45/izin/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/sampiiiiu"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/s4nX4z"
 exit 0
 fi
 clear
