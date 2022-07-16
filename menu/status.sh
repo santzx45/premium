@@ -462,6 +462,6 @@ fi
 echo ""
 echo -e "${cyan}================================================${off}"
 echo -e ""
-echo -e "$yl Script Mod By Geo Gabut${off}"
+echo -e "$yl Remake Script By SantzX${off}"
 echo -e ""
 echo -e ""
