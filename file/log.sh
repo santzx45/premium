@@ -52,7 +52,7 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "==================-[ AUTOSCRIPT PREMIUM ]-===========================" | tee -a log-install.txt
-echo "- Mod By GEO GABUT" | tee -a log-install.txt
+echo "- Remake By SantzX45" | tee -a log-install.txt
 echo ""
 sleep 1
 clear
