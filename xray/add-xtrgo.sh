@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Sangarya/izin/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/santzx45/izin/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -44,14 +44,14 @@ sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan-go/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "### $user $exp" >> /etc/trojan-go/akun.conf
 systemctl restart trojan-go.service
-trojangolink="trojan-go://${uuid}@${domain}:${trojango}/?sni=${domain}&type=ws&host=${domain}&path=/geo&encryption=none#${user}"
+trojangolink="trojan-go://${uuid}@${domain}:${trojango}/?sni=${domain}&type=ws&host=${domain}&path=/SantzX&encryption=none#${user}"
 clear
 echo -e "Name : Trojan-GO" 
 echo -e "===================================" | lolcat
 echo -e "Remarks    = ${user}"
 echo -e "IP / Host  = ${domain}"
 echo -e "Port       = ${trojango}"
-echo -e "Path       = /geo"
+echo -e "Path       = /SantzX"
 echo -e "Expired    = $exp"
 echo -e "===================================" | lolcat
 echo -e "Link TROJAN-GO : ${trojangolink}"
