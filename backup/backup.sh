@@ -64,7 +64,7 @@ echo -e "=================================" | lolcat
 echo -e "IP VPS        : $IP"
 echo -e "Link Backup   : $link"
 echo -e "=================================" | lolcat
-echo -e "Script By sampiiiiu" | lolcat
+echo -e "Remake Script by SantzX" | lolcat
 echo ""
 echo -e "Jika Anda ingin memulihkan data, silakan masukkan tautan di atas" |lolcat
 echo ""
