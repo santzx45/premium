@@ -5,7 +5,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Sangarya/izin/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/santzx45/izin/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -37,7 +37,7 @@ Port_ssh='8181';
 
 # Installing ohp Server
 cd 
-wget -O /usr/local/bin/ohp "https://raw.githubusercontent.com/Sangarya/premium/main/sshvpn/ohp"
+wget -O /usr/local/bin/ohp "https://raw.githubusercontent.com/santzx45/premium/main/sshvpn/ohp"
 chmod +x /usr/local/bin/ohp
 
 # Buat File OpenVPN TCP OHP
@@ -187,4 +187,4 @@ echo -e "Port Dropbear OHP: $Port_Dropbear"
 echo -e "Port OVPN OHP TCP: $Port_OHP"
 echo -e "Port SSH OHP     : $Port_ssh"
 echo -e "Link Download OVPN OHP: http://$MYIP:85/tcp-ohp.ovpn"
-echo -e "Script By GEO"
+echo -e "Remake Script By SantzX"
